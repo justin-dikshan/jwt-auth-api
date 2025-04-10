@@ -1,0 +1,29 @@
+### Health check
+GET http://localhost:4000/
+
+### Register
+POST http://localhost:4000/auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser2",
+    "password": "12345678"
+}
+
+### Login
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "12345678"
+}
+
+### Logout
+POST http://localhost:4000/auth/logout
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwicm9sZXMiOlsidXNlciJdLCJfaWQiOiI2N2Y1MmVkMDZiN2QxOGExMDc5NGQ1NTgiLCJpYXQiOjE3NDQzMTM2MTgsImV4cCI6MTc0NDkxODQxOH0.2q6l8DTtMXLnhckE7yBzmsyTuPBO5fk8QxKlTVGXI9A
+
+### Check private route
+
+GET http://localhost:5001/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwicm9sZXMiOlsidXNlciJdLCJfaWQiOiI2N2Y1MmVkMDZiN2QxOGExMDc5NGQ1NTgiLCJpYXQiOjE3NDQzMTMzNDcsImV4cCI6MTc0NDM5OTc0N30.Vo26slKM3IEoP5prK0dDQTy8IYqM8g39a5txcB6nqSU
